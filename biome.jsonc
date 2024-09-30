@@ -4,6 +4,13 @@
     "enabled": true
   },
 
+  // use .gitignore files
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+
   // Modern monitor configuration
   "formatter": {
     "lineWidth": 100,
@@ -34,7 +41,6 @@
 
       // Some frameworks require the use of static-only classes
       "complexity": {
-        "noStaticOnlyClass": "off",
         "noThisInStatic": "off"
       },
 
@@ -42,10 +48,5 @@
         "noSvgWithoutTitle": "off"
       }
     }
-  },
-
-  // Common files present inside a JavaScript project's .gitignore file
-  "files": {
-    "ignore": ["dist/**/*", "dev/**/*", "coverage/**/*", "node_modules/**/*", "pnpm-lock.json"]
   }
 }
