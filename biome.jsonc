@@ -48,5 +48,16 @@
         "noSvgWithoutTitle": "off"
       }
     }
+  },
+
+  // Common files present inside a JavaScript project's .gitignore file
+  "files": {
+    "ignore": [
+      "dist/**/*",
+      "dev/**/*",
+      "coverage/**/*",
+      "node_modules/**/*",
+      "pnpm-lock.json"
+    ]
   }
 }
