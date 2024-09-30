@@ -11,7 +11,9 @@
   "license": "MIT",
   "author": "Arthur Fiorette <me@arthur.place>",
   "main": "biome.jsonc",
-  "files": ["biome.jsonc"],
+  "files": [
+    "biome.jsonc"
+  ],
   "scripts": {
     "auto-version": "npm-auto-version",
     "format": "biome format --write .",
