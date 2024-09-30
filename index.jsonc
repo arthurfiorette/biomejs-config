@@ -1,0 +1,57 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+
+  // Modern monitor configuration
+  "formatter": {
+    "lineWidth": 100,
+    "indentStyle": "space"
+  },
+
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "none"
+    }
+  },
+
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+
+      "style": {
+        "noNonNullAssertion": "off",
+
+        // Reduces variable declaration verbosity
+        "noParameterAssign": "off"
+      },
+
+      // Some frameworks require the use of static-only classes
+      "complexity": {
+        "noStaticOnlyClass": "off",
+        "noThisInStatic": "off"
+      },
+
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
+    }
+  },
+
+  // Common files present inside a JavaScript project's .gitignore file
+  "files": {
+    "ignore": [
+      "dist/**/*",
+      "dev/**/*",
+      "coverage/**/*",
+      "node_modules/**/*",
+      "pnpm-lock.json"
+    ]
+  }
+}

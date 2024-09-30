@@ -1,0 +1,32 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      npm-auto-version:
+        specifier: ^1.0.0
+        version: 1.0.0
+
+packages:
+
+  npm-auto-version@1.0.0:
+    resolution: {integrity: sha512-XcTMaon94jKAL9GnF/6QJ3pogSTbtzpK1lYV+H3C6OvRp9d3mY4FpHLZQhWU6tzvaF8cBbXklk1vUG2Euv7dxg==}
+    engines: {node: '>=0.12.0'}
+    hasBin: true
+
+  semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
+    hasBin: true
+
+snapshots:
+
+  npm-auto-version@1.0.0:
+    dependencies:
+      semver: 5.7.2
+
+  semver@5.7.2: {}
