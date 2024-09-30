@@ -3,7 +3,7 @@ name: Publish to NPM
 on:
   push:
     paths:
-      - 'index.js'
+      - 'biome.jsonc'
     branches:
       - main
   workflow_dispatch:
