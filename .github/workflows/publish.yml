@@ -33,12 +33,15 @@ jobs:
       - name: Install packages
         run: pnpm install --frozen-lockfile
 
+      - name: Update versions
+        run: |
+          pnpm run auto-version
+          pnpm lint:fix
+
       - name: Prepare git and update version
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          pnpm lint:fix
-          pnpm run auto-version
           git commit -m "tags: updated tags" -a
 
       - name: Push changes
