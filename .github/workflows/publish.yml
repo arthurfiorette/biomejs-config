@@ -51,7 +51,8 @@ jobs:
           branch: ${{ github.ref }}
           tags: true
 
+      - name: Setup .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Publish to NPM
         run: pnpm publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
