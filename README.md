@@ -7,7 +7,7 @@ pnpm i -D @arthurfiorette/biomejs-config
 
 {
   "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
-  "extends": ["@arthurfiorette/biomejs-config"],
+  "extends": ["@arthurfiorette/biomejs-config"]
 }
 ```
 
