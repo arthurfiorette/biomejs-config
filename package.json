@@ -20,7 +20,7 @@
     "lint:fix": "biome check --write --unsafe ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.2",
+    "@biomejs/biome": "^1.9.4",
     "npm-auto-version": "^1.0.0"
   },
   "packageManager": "pnpm@9.11.0",
