@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
   "organizeImports": {
     "enabled": true
   },
@@ -56,10 +56,11 @@
     "ignore": [
       "dist/**/*",
       ".next/**/*",
-      "dev/**/*",
       "coverage/**/*",
       "node_modules/**/*",
-      "pnpm-lock.json"
+      "pnpm-lock.json",
+      "**/*.min.css",
+      "**/*.min.js"
     ]
   }
 }
