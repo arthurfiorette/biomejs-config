@@ -1,7 +1,13 @@
 {
-  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+
+  // Code modification
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
 
   // use .gitignore files
@@ -53,14 +59,15 @@
 
   // Common files present inside a JavaScript project's .gitignore file
   "files": {
-    "ignore": [
-      "dist/**/*",
-      ".next/**/*",
-      "coverage/**/*",
-      "node_modules/**/*",
-      "pnpm-lock.json",
-      "**/*.min.css",
-      "**/*.min.js"
+    "includes": [
+      "**",
+      "!**/dist/**/*",
+      "!**/.next/**/*",
+      "!**/coverage/**/*",
+      "!**/node_modules/**/*",
+      "!**/pnpm-lock.json",
+      "!**/*.min.css",
+      "!**/*.min.js"
     ]
   }
 }
