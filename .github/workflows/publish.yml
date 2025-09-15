@@ -9,9 +9,17 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+
+    environment:
+      name: NPM Registry
+      url: https://www.npmjs.com/package/prisma-json-types-generator
 
     steps:
       - name: Checkout
@@ -25,7 +33,7 @@ jobs:
         uses: pnpm/action-setup@v4
 
       - name: Setup node and restore cached dependencies
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
@@ -54,5 +62,5 @@ jobs:
       - name: Setup .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
-      - name: Publish to NPM
-        run: pnpm publish --no-git-checks
+      - name: Publish to NPM # OIDC authentication
+        run: pnpm publish --access public --no-git-checks
