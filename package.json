@@ -1,6 +1,6 @@
 {
   "name": "@arthurfiorette/biomejs-config",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "My personal biomejs config",
   "homepage": "https://arthur.place/biome-config",
   "bugs": "https://github.com/arthurfiorette/biomejs-config/issues",
@@ -22,7 +22,7 @@
     "lint:fix": "biome check --write --unsafe ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.4",
+    "@biomejs/biome": "^2.6.3",
     "npm-auto-version": "^1.0.0"
   },
   "packageManager": "pnpm@9.11.0",
