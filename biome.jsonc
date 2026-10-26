@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
 
   // Code modification
   "assist": {
@@ -31,6 +31,12 @@
     }
   },
 
+  "yaml": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+
   // Some configuration files allows comments
   "json": {
     "parser": {
@@ -42,7 +48,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
         "noExplicitAny": "off"
       },
@@ -73,7 +79,7 @@
       "!**/.next/**/*",
       "!**/coverage/**/*",
       "!**/node_modules/**/*",
-      "!**/pnpm-lock.json",
+      "!**/pnpm-lock.yaml",
       "!**/*.min.css",
       "!**/*.min.js"
     ]
